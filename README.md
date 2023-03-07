@@ -15,13 +15,6 @@ If you're a bit new to C/C++ then using CMake and getting started may be a bit d
 
 CMake is a cross-platform tool to generate a build setup. It doesn't actually build your code for you. For Windows users most people will use CMake to generate Visual Studio solution files. For MacOS users most people will generate an XCode project. CMake will automatically find your preferred compiler/build tools and use them. The reason CMake is used in CF, is that it's pretty much the only option available today for cross-platform C/C++ that actually works well. It's the current industry standard. CMake sort of sucks, and is admittedly "baggage", but we more or less have to deal with it to get started.
 
-Here are some notes on the important parts of our CMakeLists.txt file:
-
-* Under `add_executable` you can list out all of your source code.
-* You can toggle between using Cute Framework as a static or dynamic library by toggling this cmake switch `set(CUTE_FRAMEWORK_STATIC ON)` from ON to OFF.
-* `target_include_directories` tells cmake where your source code is. The template CMakeLists.txt file looks in the `src` folder.
-* The rest of the cmake file tells cmake where to download a copy of CF, and other basic settings.
-
 ## Building your Project
 
 Here are the steps to follow to build your game.
@@ -45,6 +38,15 @@ You can pick a specific build system with the `-G` command. For example, on Wind
 * `cmake -G "Visual Studio 17 2022" -A x64 -Bbuild_msvc_2022 .`
 
 You can also generate your build for makefiles, or even other types of build systems. [Here's a bunch of information about various kinds of builds](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) if you're not using Visual Studio.
+
+### CMakeLists.txt Details
+
+Here are some notes on the important parts of our CMakeLists.txt file:
+
+* Under `add_executable` you can list out all of your source code.
+* You can toggle between using Cute Framework as a static or dynamic library by toggling this cmake switch `set(CUTE_FRAMEWORK_STATIC ON)` from ON to OFF.
+* `target_include_directories` tells cmake where your source code is. The template CMakeLists.txt file looks in the `src` folder.
+* The rest of the cmake file tells cmake where to download a copy of CF, and other basic settings.
 
 ## Full Game Example
 
