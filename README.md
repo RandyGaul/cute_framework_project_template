@@ -9,7 +9,7 @@ A copy + pastable CMake project template for [Cute Framework](https://github.com
 
 That's it! Feel free to skip the rest of this page if you're comfortable. The rest of this page is a CMake 101 walkthrough for those new to C/C++ or CMake.
 
-## CMake Help
+## CMake 101 Walkthrough
 
 If you're a bit new to C/C++ then using CMake and getting started may be a bit difficult. Here's a CMake 101 tutorial to help newcomers get going. Be sure to follow the above steps until #4 -- this section will help you do #4.
 
