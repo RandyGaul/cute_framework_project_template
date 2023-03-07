@@ -17,7 +17,7 @@ CMake is a cross-platform tool to generate a build setup. It doesn't actually bu
 
 ### Building your Project
 
-Here are the steps to follow to build your game.
+Here are the steps to build your game.
 
 1. Download and install CMake v3.14+ (for easy cross-platform building). 
 2. Copy CMakeLists.txt ([this one here](https://github.com/RandyGaul/cute_framework_project_template/blob/main/CMakeLists.txt)) into the top-level of your project directory.
