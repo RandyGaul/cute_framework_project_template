@@ -15,7 +15,7 @@ If you're a bit new to C/C++ then using CMake and getting started may be a bit d
 
 CMake is a cross-platform tool to generate a build setup. It doesn't actually build your code for you. For Windows users most people will use CMake to generate Visual Studio solution files. For MacOS users most people will generate an XCode project. CMake will automatically find your preferred compiler/build tools and use them. The reason CMake is used in CF, is that it's pretty much the only option available today for cross-platform C/C++ that actually works well. It's the current industry standard. CMake sort of sucks, and is admittedly "baggage", but we more or less have to deal with it to get started.
 
-## Building your Project
+### Building your Project
 
 Here are the steps to follow to build your game.
 
