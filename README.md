@@ -1,6 +1,6 @@
 # Cute Framework Project Template
 
-A copy + pastable CMake project template for Cute Framework. Here are the steps to get a project off the ground and building.
+A copy + pastable CMake project template for [Cute Framework](https://github.com/RandyGaul/cute_framework). Here are the steps to get a project off the ground and building.
 
 1. Download and install CMake v3.14+ (for easy cross-platform building). 
 2. Copy CMakeLists.txt ([this one here](https://github.com/RandyGaul/cute_framework_project_template/blob/main/CMakeLists.txt)) into the top-level of your project directory.
