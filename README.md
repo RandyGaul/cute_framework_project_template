@@ -33,7 +33,7 @@ Here are the steps to follow to build your game.
 5. Create a folder called `build_folder`. This is where cmake will store your generated build files.
 6. Run this command: `cmake -A x64 -Bbuild_folder .`
 
-And that's it! Your build project has been generated. You can now build your game by using the build project inside of `build_folder`. If you generated for Visual Studio you `.sln` fill is in `build_folder`. If you used XCode then your XCode project is in `build_folder`.
+And that's it! Your build project has been generated. You can now build your game by using the build project inside of `build_folder`. If you generated for Visual Studio you `.sln` file is in `build_folder`. If you used XCode then your XCode project is in `build_folder`.
 
 ### Specific Build Systems
 
@@ -48,7 +48,7 @@ You can also generate your build for makefiles, or even other types of build sys
 
 ## Full Game Example
 
-If you're stuck I highly recommend downloading a copy of Cute Snake to see as a reference. For Windows users you can simply click on the [msvc2019.cmd](https://github.com/RandyGaul/cute_snake/blob/master/msvc2019.cmd) batch file if you're using Visual Studio 2019, and the script is trivial to modify for other Visual Studio versions.
+If you're stuck I highly recommend downloading a copy of [Cute Snake](https://github.com/RandyGaul/cute_snake) to see as a reference. For Windows users you can simply click on the [msvc2019.cmd](https://github.com/RandyGaul/cute_snake/blob/master/msvc2019.cmd) batch file if you're using Visual Studio 2019, and the script is trivial to modify for other Visual Studio versions.
 
 ## Ask for Help
 
