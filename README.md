@@ -2,7 +2,7 @@
 
 A copy + pastable CMake project template for [Cute Framework](https://github.com/RandyGaul/cute_framework). Here are the steps to get a project off the ground and building.
 
-1. Download and install CMake v3.14+ (for easy cross-platform building). 
+1. Download and install CMake v3.14+ (for easy cross-platform building), and [git](https://git-scm.com/downloads). 
 2. Copy CMakeLists.txt ([this one here](https://github.com/RandyGaul/cute_framework_project_template/blob/main/CMakeLists.txt)) into the top-level of your project directory.
 3. Find + replace "my_project_name".
 4. Run CMake on your project folder.
@@ -19,7 +19,7 @@ CMake is a cross-platform tool to generate a build setup. It doesn't actually bu
 
 Here are the steps to build your game.
 
-1. Download and install CMake v3.14+ (for easy cross-platform building). 
+1. Download and install CMake v3.14+ (for easy cross-platform building), and [git](https://git-scm.com/downloads). 
 2. Copy CMakeLists.txt ([this one here](https://github.com/RandyGaul/cute_framework_project_template/blob/main/CMakeLists.txt)) into the top-level of your project directory.
 3. Find + replace "my_project_name".
 4. Open a command prompt in your folder (terminal for MacOS users).
