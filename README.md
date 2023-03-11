@@ -5,13 +5,40 @@ A copy + pastable CMake project template for [Cute Framework](https://github.com
 1. Download and install CMake v3.14+ (for easy cross-platform building), and [git](https://git-scm.com/downloads). 
 2. Copy CMakeLists.txt ([this one here](https://github.com/RandyGaul/cute_framework_project_template/blob/main/CMakeLists.txt)) into the top-level of your project directory.
 3. Find + replace "my_project_name".
-4. Run CMake on your project folder.
+4. Make a folder called `src` in the top-level of your project, and place your initial `main.cpp` there.
+5. Run CMake on your project folder.
 
 That's it! Feel free to skip the rest of this page if you're comfortable. The rest of this page is a CMake 101 walkthrough for those new to C/C++ or CMake.
 
+You can use this code snippet for your initial `main.cpp`.
+
+```cpp
+#include <cute.h>
+using namespace Cute;
+
+int main(int argc, char* argv[])
+{
+	// Create a window with a resolution of 640 x 480.
+	int options = APP_OPTIONS_DEFAULT_GFX_CONTEXT | APP_OPTIONS_WINDOW_POS_CENTERED;
+	Result result = make_app("Fancy Window Title", 0, 0, 640, 480, options, argv[0]);
+	if (is_error(result)) return -1;
+
+	while (app_is_running())
+	{
+		app_update();
+		// All your game logic and updates go here...
+		app_draw_onto_screen();
+	}
+
+	destroy_app();
+
+	return 0;
+}
+```
+
 ## CMake 101 Walkthrough
 
-If you're a bit new to C/C++ then using CMake and getting started may be a bit difficult. Here's a CMake 101 tutorial to help newcomers get going. Be sure to follow the above steps until #4 -- this section will help you do #4.
+If you're a bit new to C/C++ then using CMake and getting started may be a bit difficult. Here's a CMake 101 tutorial to help newcomers get going. Be sure to follow the above steps until #4 -- this section will help you do #5.
 
 CMake is a cross-platform tool to generate a build setup. It doesn't actually build your code for you. For Windows users most people will use CMake to generate Visual Studio solution files. For MacOS users most people will generate an XCode project. CMake will automatically find your preferred compiler/build tools and use them. The reason CMake is used in CF, is that it's pretty much the only option available today for cross-platform C/C++ that actually works well. It's the current industry standard. CMake sort of sucks, and is admittedly "baggage", but we more or less have to deal with it to get started.
 
@@ -22,9 +49,10 @@ Here are the steps to build your game.
 1. Download and install CMake v3.14+ (for easy cross-platform building), and [git](https://git-scm.com/downloads). 
 2. Copy CMakeLists.txt ([this one here](https://github.com/RandyGaul/cute_framework_project_template/blob/main/CMakeLists.txt)) into the top-level of your project directory.
 3. Find + replace "my_project_name".
-4. Open a command prompt in your folder (terminal for MacOS users).
-5. Create a folder called `build_folder`. This is where cmake will store your generated build files.
-6. Run this command: `cmake -A x64 -Bbuild_folder .`
+4. Make a folder called `src` in the top-level of your project, and place your initial `main.cpp` there.
+5. Open a command prompt in your folder (terminal for MacOS users).
+6. Create a folder called `build_folder`. This is where cmake will store your generated build files.
+7. Run this command: `cmake -A x64 -Bbuild_folder .`
 
 And that's it! Your build project has been generated. You can now build your game by using the build project inside of `build_folder`. If you generated for Visual Studio you `.sln` file is in `build_folder`. If you used XCode then your XCode project is in `build_folder`.
 
