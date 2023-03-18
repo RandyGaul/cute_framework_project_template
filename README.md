@@ -2,11 +2,11 @@
 
 A copy + pastable CMake project template for [Cute Framework](https://github.com/RandyGaul/cute_framework). Here are the steps to get a project off the ground and building.
 
-1. Download and install CMake v3.14+ (for easy cross-platform building), and [git](https://git-scm.com/downloads). 
+1. Download and install CMake (v3.14 or higher, you can just get the latest version). CMake is for easy cross-platform building. Also install [git](https://git-scm.com/downloads). If you're new to git and a Windows user it's highly recommended to use [Github Desktop](https://desktop.github.com/).
 2. Copy CMakeLists.txt ([this one here](https://github.com/RandyGaul/cute_framework_project_template/blob/main/CMakeLists.txt)) into the top-level of your project directory.
 3. Find + replace "my_project_name".
 4. Make a folder called `src` in the top-level of your project, and place your initial `main.cpp` there.
-5. Run CMake on your project folder.
+5. Run CMake on your project folder. If you need help with this step, try reading the [CMake 101 section here](https://github.com/RandyGaul/cute_framework_project_template#cmake-101-walkthrough).
 
 That's it! Feel free to skip the rest of this page if you're comfortable. The rest of this page is a CMake 101 walkthrough for those new to C/C++ or CMake.
 
