@@ -65,9 +65,7 @@ You can pick a specific build system with the `-G` command. For example, on Wind
 * `cmake -G "Visual Studio 16 2019" -A x64 -Bbuild_msvc_2019 .`
 * `cmake -G "Visual Studio 17 2022" -A x64 -Bbuild_msvc_2022 .`
 
-You can also generate your build for makefiles, or even other types of build systems. [Here's a bunch of information about various kinds of builds](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) if you're not using Visual Studio.
-
-You can generate a build for all kinds of build systems, including popular ones such as "-G "Unix Makefiles", "-G Xcode", "-G MSYS Makefiles", "-G MinGW Makefiles", etc.
+You can also generate your build for makefiles, or even other types of build systems. [Here's a bunch of information about various kinds of builds](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) if you're not using Visual Studio. Here are some popular ones: "-G "Unix Makefiles", "-G Xcode", "-G MSYS Makefiles", "-G MinGW Makefiles".
 
 ### CMakeLists.txt Details
 
