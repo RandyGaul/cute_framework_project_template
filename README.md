@@ -67,6 +67,8 @@ You can pick a specific build system with the `-G` command. For example, on Wind
 
 You can also generate your build for makefiles, or even other types of build systems. [Here's a bunch of information about various kinds of builds](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) if you're not using Visual Studio.
 
+You can generate a build for all kinds of build systems, including popular ones such as "-G "Unix Makefiles", "-G Xcode", "-G MSYS Makefiles", "-G MinGW Makefiles", etc.
+
 ### CMakeLists.txt Details
 
 Here are some notes on the important parts of our CMakeLists.txt file:
