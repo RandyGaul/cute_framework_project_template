@@ -38,6 +38,8 @@ if(EMSCRIPTEN)
 	target_link_options(mygame PRIVATE -o mygame.html --preload-file ${CMAKE_SOURCE_DIR}/content@/content --emrun -s ASYNCIFY=1 -O1)
 endif()
 
+# Some basic information needed for CMake to generate your Info.plist file.
+# This is necessary for e.g. iOS builds.
 if(APPLE)
 	set_target_properties(mygame PROPERTIES
 		MACOSX_BUNDLE_GUI_IDENTIFIER "com.myteam.mygame"
