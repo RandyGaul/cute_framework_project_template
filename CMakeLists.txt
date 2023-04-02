@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(my_project_name)
+project(mygame)
 
 # Must have at least C++17.
 set(CMAKE_CXX_STANDARD 17)
@@ -24,25 +24,34 @@ FetchContent_MakeAvailable(cute)
 
 # Source code for your game.
 add_executable(
-	my_project_name
+	mygame
 	src/main.cpp
 )
 
 # Our source code will be in the `src` folder.
-target_include_directories(my_project_name PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
+target_include_directories(mygame PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
 
+# Support for web builds through the Emscripten compiler.
 if(EMSCRIPTEN)
 	set(CMAKE_EXECUTABLE_SUFFIX ".html")
-	target_compile_options(my_project_name PUBLIC -O1 -fno-rtti -fno-exceptions)
-	target_link_options(my_project_name PRIVATE -o my_project_name.html --preload-file ${CMAKE_SOURCE_DIR}/content@/content --emrun -s ASYNCIFY=1 -O1)
+	target_compile_options(mygame PUBLIC -O1 -fno-rtti -fno-exceptions)
+	target_link_options(mygame PRIVATE -o mygame.html --preload-file ${CMAKE_SOURCE_DIR}/content@/content --emrun -s ASYNCIFY=1 -O1)
+endif()
+
+if(APPLE)
+	set_target_properties(mygame PROPERTIES
+		MACOSX_BUNDLE_GUI_IDENTIFIER "com.myteam.mygame"
+		MACOSX_BUNDLE_BUNDLE_VERSION "1.0.0"
+		MACOSX_BUNDLE_SHORT_VERSION_STRING "1.0.0"
+	)
 endif()
 
 # Make the game link against Cute Framework.
-target_link_libraries(my_project_name cute)
+target_link_libraries(mygame cute)
 
 # For convenience on Windows, set MSVC debugger's working directory in the build folder.
-# Also ask MSVC to make my_project_name the startup project.
+# Also ask MSVC to make the game the startup project.
 if (MSVC)
-	set_property(TARGET my_project_name PROPERTY VS_DEBUGGER_WORKING_DIRECTORY $<TARGET_FILE_DIR:my_project_name>)
-	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT my_project_name)
+	set_property(TARGET mygame PROPERTY VS_DEBUGGER_WORKING_DIRECTORY $<TARGET_FILE_DIR:mygame>)
+	set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT mygame)
 endif()
