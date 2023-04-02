@@ -48,7 +48,7 @@ Here are the steps to build your game.
 
 1. Download and install CMake v3.14+ (for easy cross-platform building), and [git](https://git-scm.com/downloads). 
 2. Copy CMakeLists.txt ([this one here](https://github.com/RandyGaul/cute_framework_project_template/blob/main/CMakeLists.txt)) into the top-level of your project directory.
-3. Find + replace "my_project_name".
+3. Find + replace "mygame" with the name of your game (no spaces, special characters, or underscores allowed).
 4. Make a folder called `src` in the top-level of your project, and place your initial `main.cpp` there.
 5. Open a command prompt in your folder (terminal for MacOS users).
 6. Create a folder called `build_folder`. This is where cmake will store your generated build files.
