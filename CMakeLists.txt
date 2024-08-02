@@ -17,7 +17,7 @@ endif()
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 # Disable building CF samples by default
-set(CF_FRAMEWORK_BUILD_SAMPLES ON)
+set(CF_FRAMEWORK_BUILD_SAMPLES OFF)
 
 # Disable building CF tests by default
 set(CF_FRAMEWORK_BUILD_TESTS OFF)
