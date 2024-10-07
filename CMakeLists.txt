@@ -41,13 +41,6 @@ add_executable(
 # Our source code will be in the `src` folder.
 target_include_directories(${PROJECT_NAME} PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
 
-# Support for web builds through the Emscripten compiler.
-if(EMSCRIPTEN)
-	set(CMAKE_EXECUTABLE_SUFFIX ".html")
-	target_compile_options(${PROJECT_NAME} PUBLIC -O1 -fno-rtti -fno-exceptions)
-	target_link_options(${PROJECT_NAME} PRIVATE -o ${PROJECT_NAME}.html --preload-file ${CMAKE_SOURCE_DIR}/content@/content --emrun -s ASYNCIFY=1 -O1)
-endif()
-
 # Some basic information needed for CMake to generate your Info.plist file.
 # This is necessary for e.g. iOS builds.
 if(APPLE)
