@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
 	{
 		app_update();
 		// All your game logic and updates go here...
-		app_draw_onto_screen();
+		app_draw_onto_screen(true);
 	}
 
 	destroy_app();
