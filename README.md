@@ -19,7 +19,7 @@ using namespace Cute;
 int main(int argc, char* argv[])
 {
 	// Create a window with a resolution of 640 x 480.
-	int options = APP_OPTIONS_WINDOW_POS_CENTERED;
+	int options = CF_APP_OPTIONS_WINDOW_POS_CENTERED_BIT;
 	Result result = make_app("Fancy Window Title", 0, 0, 0, 640, 480, options, argv[0]);
 	if (is_error(result)) return -1;
 
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 	{
 		app_update();
 		// All your game logic and updates go here...
-		app_draw_onto_screen();
+		app_draw_onto_screen(true);
 	}
 
 	destroy_app();
